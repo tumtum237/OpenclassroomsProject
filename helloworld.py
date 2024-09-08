@@ -63,13 +63,18 @@ print(Portrait_philo_jon)
 fruits={
     "orange":"orange", "pomme":"rouge","banane":"jaune"
 }
+print(fruits)
 
 fruits["kiwi"] = "vert"
+print(fruits)
 
 couleur_banane = fruits["banane"]
+print(couleur_banane)
 
 fruits["pomme"] = "vert"
+print(fruits)
 
 fruits.pop("banane")
+print(fruits)
 
 fruits.items()

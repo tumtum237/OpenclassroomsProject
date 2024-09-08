@@ -70,6 +70,6 @@ couleur_banane = fruits["banane"]
 
 fruits["pomme"] = "vert"
 
-fruits.pop["banane"]
+fruits.pop("banane")
 
 fruits.items()

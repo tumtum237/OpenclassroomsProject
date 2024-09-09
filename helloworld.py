@@ -78,3 +78,7 @@ fruits.pop("banane")
 print(fruits)
 
 fruits.items()
+
+
+mes_dico = [physique_jon,Portrait_philo_jon,fruits]
+print(mes_dico)

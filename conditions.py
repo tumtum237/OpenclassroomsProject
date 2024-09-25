@@ -22,7 +22,7 @@ else:
 
 
 
-fruit = "_"
+fruit = "pomme"
 match fruit:
     case "pomme":
         print("J'aime les pommes !")
@@ -35,9 +35,9 @@ match fruit:
 
 
 nombre_a_gauche = 23
-nombre_a_droite = 8
+nombre_a_droite = 9
 
-symbole = "*"
+symbole = "/"
 
 resultat = 0
 
@@ -51,18 +51,19 @@ match symbole :
     case "-" :
         print("symbole moins")
     case "*" :
-        print("Bien joué, symbole multiplication")
+        print("symbole multiplication")
+        if nombre_a_droite == 0 or nombre_a_droite == 0:
+            print ("toute multiplication par 0 donne 0")
+        else: 
+            resultat = nombre_a_droite*nombre_a_gauche
+            print(resultat)
     case "/" :
-        print ("symbole division")
-    case _:
-        print("symbole inexistant")    
-
-
-match symbole : 
-    case "/":
         if nombre_a_droite == 0:
             print ("impossible de diviser par 0")
         else:
             resultat = nombre_a_gauche/nombre_a_droite
             print (resultat)
+        print ("symbole division")    
 
+    case _:
+        print("symbole inexistant")    

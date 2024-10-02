@@ -151,25 +151,31 @@ def calculer_salaire_mensuel():
   while True:
     try:
       salaire_annuel = float(input("Veuillez saisir votre salaire annuel : "))
+      mois_annuel = int(input("entre les mois travaillé :"))
       if salaire_annuel <= 0:
         print("Veuillez saisir un salaire annuel positif.")
+      elif mois_annuel <= 0:
+        print("entrez un nombre de mois positif")
       else:
         break
     except ValueError:
       print("Veuillez entrer un nombre valide.")
 
-  salaire_mensuel = salaire_annuel / 12
+  salaire_mensuel = salaire_annuel / mois_annuel
   print("Votre salaire mensuel est de :", salaire_mensuel)
 
 # Appel de la fonction pour l'utiliser
 calculer_salaire_mensuel()
 
 
-while True:
-   try:
-      prixHT = int(input("Entre le prix hors taxe"))
-      prixTTC = prixHT+prixHT*0.2
-      print(prixTTC)
-      break
-   except ValueError:
-      print("Attention, tu dois mettre un nombre")
+
+
+def calcul_prixTTC():
+    while True:
+       try:
+        prixHT = int(input("Entre le prix hors taxe"))
+        prixTTC = prixHT+prixHT*0.2
+        print(prixTTC)
+        break
+       except ValueError:
+        print("Attention, tu dois mettre un nombre")

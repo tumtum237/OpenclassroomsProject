@@ -71,9 +71,105 @@ for nombre in liste_de_nombre:
  
     
 #fonctions
+
+# sans paramètre
 def afficher_message ():
     print("hello boy")
 
 afficher_message()
 
+# Avec paramètre
+def nom_prenom (nom, prenom):
+    print ("nom :", nom)
+    print ("prenom :", prenom)
 
+
+nom_prenom("Dikongue", "wilfried")  
+
+
+def avg (somme_element, nombre_element):
+    resultat = somme_element/nombre_element
+    return resultat
+
+
+
+
+def addition(y,z):
+    solution = y + z
+    return solution, y, z
+
+y=5
+z =10
+retour = addition(y,z)
+print (retour)
+
+
+#Exercice
+def salaire_mensuel(salaire_annuel, months_in_year):
+    resultat = salaire_annuel/months_in_year
+    return resultat
+
+salaire_annuel = 34000
+months_in_year = 12
+rendu = salaire_mensuel (salaire_annuel,months_in_year)
+
+print (rendu)
+
+
+def salaire_hebdo(salaire_mensuel, weeks_in_months):
+    resultat = salaire_mensuel/weeks_in_months
+    return resultat
+
+salaire_mensuel = 2833
+weeks_in_months = 4
+rendu = salaire_hebdo(salaire_mensuel,weeks_in_months)
+
+print (rendu)
+
+
+
+def salaire_horaire(): 
+ while True:
+    try:
+        salaire_hebdo = float(input("entre ton salaire hebdo :"))
+        taux_horaire = int(input("entre tes heures semaine : "))
+        salaire_horaire = salaire_hebdo/taux_horaire
+        print(salaire_horaire)
+        break
+    except ValueError:
+       print("Attention, entre un montant valide")      
+
+
+salaire_horaire ()
+
+
+
+
+
+def calculer_salaire_mensuel():
+
+  while True:
+    try:
+      salaire_annuel = float(input("Veuillez saisir votre salaire annuel : "))
+      if salaire_annuel <= 0:
+        print("Veuillez saisir un salaire annuel positif.")
+      else:
+        break
+    except ValueError:
+      print("Veuillez entrer un nombre valide.")
+
+  salaire_mensuel = salaire_annuel / 12
+  print("Votre salaire mensuel est de :", salaire_mensuel)
+
+# Appel de la fonction pour l'utiliser
+calculer_salaire_mensuel()
+
+
+while True:
+   try:
+      prixHT = int(input("Entre le prix hors taxe"))
+      prixTTC = prixHT+prixHT*0.2
+      print(prixTTC)
+      break
+   except ValueError:
+      print("Attention, tu dois mettre un nombre")

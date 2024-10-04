@@ -153,11 +153,8 @@ def calculer_salaire_mensuel():
       salaire_annuel = float(input("Veuillez saisir votre salaire annuel : "))
       mois_annuel = int(input("entre les mois travaillé :"))
       if salaire_annuel <= 0:
-        print("Veuillez saisir un salaire annuel positif.")
-      elif mois_annuel <= 0:
-        print("entrez un nombre de mois positif")
-      else:
-        break
+         print("Entre un salaire positif")
+      break
     except ValueError:
       print("Veuillez entrer un nombre valide.")
 
@@ -179,3 +176,21 @@ def calcul_prixTTC():
         break
        except ValueError:
         print("Attention, tu dois mettre un nombre")
+
+
+
+def calculer_taux_de_conversion(campagne):
+    taux_de_conversion = campagne['visiteurs'] / campagne['conversions']
+    return taux_de_conversion
+
+calculer_taux_de_conversion(premiere_campagne)
+calculer_taux_de_conversion(seconde_campagne)
+calculer_taux_de_conversion(troisieme_campagne)
+
+
+#utiliser le try/except pour couvrir les erreur possible 
+# dans l'appel d'une fonction et évité de faire planter le code
+#exemple je demande un input sur int, la personne ne donnne pas d'int 
+#il faut que je prépare un except pour ce cas de figure
+
+#dans le try on met le code qui peu générer une erreur et avec le except on couvre l'erreur

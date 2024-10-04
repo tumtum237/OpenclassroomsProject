@@ -154,6 +154,8 @@ def calculer_salaire_mensuel():
       mois_annuel = int(input("entre les mois travaillé :"))
       if salaire_annuel <= 0:
          print("Entre un salaire positif")
+      if mois_annuel <= 0:
+         print("Entre un salaire positif")
       break
     except ValueError:
       print("Veuillez entrer un nombre valide.")
@@ -183,9 +185,9 @@ def calculer_taux_de_conversion(campagne):
     taux_de_conversion = campagne['visiteurs'] / campagne['conversions']
     return taux_de_conversion
 
-calculer_taux_de_conversion(premiere_campagne)
-calculer_taux_de_conversion(seconde_campagne)
-calculer_taux_de_conversion(troisieme_campagne)
+#calculer_taux_de_conversion(premiere_campagne)
+#calculer_taux_de_conversion(seconde_campagne)
+#calculer_taux_de_conversion(troisieme_campagne)
 
 
 #utiliser le try/except pour couvrir les erreur possible 

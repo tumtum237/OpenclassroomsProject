@@ -1,3 +1,4 @@
+
 def print_welcome_message():
     print("Bienvenue sur la mini-calculatrice !")
     
